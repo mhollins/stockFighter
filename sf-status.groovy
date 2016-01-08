@@ -26,15 +26,15 @@ def post = { method, body ->
 	return resp.data
 }
 
-def id = args[0]
-if (!id) {
-	println "please provide an order id"
-	return
+if (args.size() > 0) {
+	def id = args[0]
+
+	println "checking order $id"
+
+	println get ("venues/$venue/stocks/$symbol/orders/$id")
 }
-
-println "checking order $id"
-
-println get ("venues/$venue/stocks/$symbol/orders/$id")
-
-println get("venues/$venue/stocks/$symbol")
+else {
+	println "getting status for all orders"
+	println get("venues/$venue/accounts/$account/orders")
+}
 
