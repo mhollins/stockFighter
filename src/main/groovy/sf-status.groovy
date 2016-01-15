@@ -34,7 +34,12 @@ if (args.size() > 0) {
 	println get ("venues/$venue/stocks/$symbol/orders/$id")
 }
 else {
-	println "getting status for all orders"
-	println get("venues/$venue/accounts/$account/orders")
+	println "getting status for all open orders"
+	def orders = get("venues/$venue/accounts/$account/orders").orders
+	orders.each { order ->
+		if (order.open) {
+			println "$order.id) $order.direction $order.qty $order.symbol @ $order.price. Filled=$order.totalFilled"
+		}
+	}
 }
 

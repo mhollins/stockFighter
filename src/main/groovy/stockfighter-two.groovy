@@ -34,9 +34,9 @@ println get("venues/$venue/stocks/$symbol")
 def order = [ account: account,
 			  venue: venue,
 			  stock: symbol,
-			  price: 1000,
+			  price: 3500,
 			  qty: 10,
-			  direction: 'buy',
+			  direction: 'sell',
 			  orderType: 'limit' ]
 			  
 println post("venues/$venue/stocks/$symbol/orders", order)
