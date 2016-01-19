@@ -1,4 +1,4 @@
-@Grab('org.java-websocket:Java-WebSocket:1.3.1-SNAPSHOT')
+//@Grab('org.java-websocket:Java-WebSocket:1.3.1-SNAPSHOT')
 import javax.net.ssl.SSLContext
 import javax.net.ssl.SSLSocketFactory
 

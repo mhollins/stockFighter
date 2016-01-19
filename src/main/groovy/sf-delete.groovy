@@ -1,4 +1,4 @@
-@Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.7.2')
+//@Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.7.2')
 import groovyx.net.http.RESTClient
 import groovy.json.JsonSlurper
 import static groovyx.net.http.ContentType.*
